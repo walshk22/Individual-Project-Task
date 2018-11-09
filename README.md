@@ -1,11 +1,10 @@
 # Individual-Project-Task
-Getting information from gitHub API to display on a site:
+Getting information from gitHub API to display on a site using Haskell:
 
-Tutorial: https://github.com/jgaa/restc-cpp/blob/master/doc/Tutorial.md
+Tutorial: https://github.com/phadej/github
 
-Must have the following downloaded:
-Homebrew
-Boost
-Github
+
+
+
 
 
