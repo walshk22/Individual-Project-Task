@@ -1,3 +1,16 @@
+
+{-# LANUGAGE OverloadedStrings #-}
+{-# LANGUAGE QuasiQuotes  #-}
+{-# LANUGAGE RecordWildCards  #-}
+{-# LANUGAGE TemplateHaskell  #-}
+{-# LANUGAGE TypeFamilies #-}
+
+import Data.Text(Text)
+import Yesod
+
+instance toJson UserRepos where
+    toJson UserRepos {..} = object
+    	   [ "RepoName" .= repoName ']
 module ListUserRepos where
 
 import qualified Github.Repos as Github
