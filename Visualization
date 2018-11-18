@@ -1,0 +1,20 @@
+import qualified Github.Repositories
+import Data.List
+import Data.Maybe
+
+
+<!DOCTYPE html>
+<html lang = "en">
+      <head>
+	<script src = "https://d3js.org/d3.v4.min.js"></script>
+      </head>
+
+     <body>
+	<h3> D3 collection API</h3>
+	<script>
+	      repos <-Github.user "walshk22"
+	      print repos
+	 </script>
+	</body>
+</html>
+		
