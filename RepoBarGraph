@@ -1,0 +1,30 @@
+var userName = "walshk22"
+
+const repoData = [
+{RepoName: 'CS4052-Lab-1', numCommits: 8, color:'blue' }
+{RepoName: 'Individual-Project-Task', numCommits:15 ,color:'green'}
+{RepoName: 'Hello-World', numCommits:3,color:'red' }
+{RepoName: 'Lowest-Common-Ancestor', numCommits: 15,color:'purple'}
+{RepoName: 'Measuring-Software-Engineering', numCommits:4 , color:'yellow' }
+{RepoName: 'CS4052-Final-Scene', numCommits: 3, color: 'orange'}
+{RepoName: 'Software-Engineering-Bio', numCommits: 3, color: 'grey'}
+];
+
+var svgWidth = 500, svgHeight =300; barPadding = 5;
+var barWidth = (svgWidth/repoData.length);
+
+var svg = d3.select('svg')
+      .attr("width", svgWidth)
+      .attr("height", svgHeight);
+
+var barChart = svg.selectAll("rect")
+    .data(repoData.numCommits)
+    .enter()
+    .append("rect")
+    .attr("y", function(d) {return svgHeight -d})
+    .attr("height", function(d) {return d})
+    .attr("width", barWidth - barPadding)
+    .attr("transform", function(d, i){ 
+      var translate = [barWdith = 1, 0];
+      return "translate("+translate +")";
+    })
