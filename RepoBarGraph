@@ -23,10 +23,10 @@ var barChart = svg.selectAll("rect")
     .data(commitData)
     .enter()
     .append("rect")
-    .attr("y", function(d) {return svgHeight -d})
-    .attr("height", function(d) {return d})
+    .attr("y", function(d) {return svgHeight -d;})
+    .attr("height", function(d) {return d;})
     .attr("width", barWidth - barPadding)
     .attr("transform", function(d, i){ 
-      var translate = [barWdith = 1, 0];
+      var translate = [barWidth * i, 0];
       return "translate("+translate +")";
     })
