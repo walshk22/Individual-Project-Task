@@ -6,19 +6,21 @@ const repoData = [
 {RepoName: 'Hello-World', numCommits:3,color:'red' }
 {RepoName: 'Lowest-Common-Ancestor', numCommits: 15,color:'purple'}
 {RepoName: 'Measuring-Software-Engineering', numCommits:4 , color:'yellow' }
-{RepoName: 'CS4052-Final-Scene', numCommits: 3, color: 'orange'}
+{RepoName: 'CS4052-Final-Scene', numCommits: 4, color: 'orange'}
 {RepoName: 'Software-Engineering-Bio', numCommits: 3, color: 'grey'}
 ];
 
+var commitData = [8, 15, 3, 15, 4, 4, 3];
+
 var svgWidth = 500, svgHeight =300; barPadding = 5;
-var barWidth = (svgWidth/repoData.length);
+var barWidth = (svgWidth/commitData.length);
 
 var svg = d3.select('svg')
       .attr("width", svgWidth)
       .attr("height", svgHeight);
 
 var barChart = svg.selectAll("rect")
-    .data(repoData.numCommits)
+    .data(commitData)
     .enter()
     .append("rect")
     .attr("y", function(d) {return svgHeight -d})
