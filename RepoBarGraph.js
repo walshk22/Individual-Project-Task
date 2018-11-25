@@ -19,6 +19,7 @@ var svg = d3.select('svg')
       .attr("width", svgWidth)
       .attr("height", svgHeight);
 
+
 var barChart = svg.selectAll("rect")
     .data(commitData)
     .enter()
@@ -29,4 +30,13 @@ var barChart = svg.selectAll("rect")
     .attr("transform", function(d, i){ 
       var translate = [barWidth * i, 0];
       return "translate("+translate +")";
-    })
+    });
+
+var text = svg.selectAll("text")
+      .data(commitData)
+      .enter()
+      .append("text")
+      .text(function(d) { return d/10; });
+      .attr("y", function (d,i) { return svgHeight -d - 2; })
+      .attr("x", function (d, i) { return barWidth * i; })
+      .attr("fill", "#A64C38");
