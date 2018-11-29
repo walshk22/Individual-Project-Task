@@ -11,6 +11,9 @@ const repoData = [
 ];
 
 var commitData = [80, 150, 30, 150, 40, 40, 30];
+var repoNames = ['CS4052-Lab-1', 'Individual-Project-Task', 'Hello-World'
+        'Lowest-Common-Ancestor', 'Measuring-Software_Engineering',
+        'CS4052-Final-Scene', 'Software-Engineering-Bio'];
 
 var svgWidth = 500, svgHeight =300; barPadding = 5;
 var barWidth = (svgWidth/commitData.length);
@@ -40,3 +43,15 @@ var text = svg.selectAll("text")
       .attr("y", function (d,i) { return svgHeight -d - 2; })
       .attr("x", function (d, i) { return barWidth * i; })
       .attr("fill", "#A64C38");
+
+      
+var name = svg.selectAll("text") 
+        .data(repoNames)
+          .enter()
+          .append("text")
+          .text(function(d) {return d;})
+          .attr("y", function (d,i) { return svgHeight -d - 2; })
+        .attr("x", function (d, i) { return barWidth * i; })
+        .attr("fill", "#A64C38");
+      });
+
