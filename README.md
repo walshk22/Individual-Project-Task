@@ -11,3 +11,5 @@ This project was intially done in C++, but due to complications with the librari
 
 The main goal of the visualization was to create a bar graph that showed the commits of a each repository a user has. To test this, I used my own gitHub repository lists and commits. The first attempt of this was done using data that was written in the code, because of the issue pulling information from the rest interface. The index.html and RepoBarGraph.js files have the code for the visualization. The visualization should show a bar graph, with one bar per repository, labeled with the number of commits per graph (A picture of the visualization is also in the repository)
 
+
+For the visualization, the index.html and RepoBarGraph.js files were used. They were referenced from a youtube video, which showed how to use the d3.js library. On 29 November 2018, more code was added to the RepoBarGraph.js file in attempt to add a cursor scroll to the program, which would provide the name of the repository when the cursor was over the corresponding bar.
